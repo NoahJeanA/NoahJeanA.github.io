@@ -1,0 +1,36 @@
+body {
+    background-size: 2000px 2000px;
+    background-color: rgb(44, 52, 68);
+    background-repeat:no-repeat;
+    
+   }
+
+.h1{
+    text-align: center;
+    color: white;
+}
+
+.startbutton {
+    position: absolute;
+    left:40%;
+    top:20%;
+    height: 100px;
+    width: 400px;
+    font-size: 20px;
+    border-radius: 20px;
+    background-color: white;
+    border: none;
+    transition: all 0.3s ease 0s;
+    -ms-user-select: None;
+    -moz-user-select: None;
+    -webkit-user-select: None;
+    user-select: None; 
+}
+.startbutton:hover {
+    background-color: rgba(24, 207, 0, 0.205);
+    color: white;
+    -ms-user-select: None;
+    -moz-user-select: None;
+    -webkit-user-select: None;
+    user-select: None;
+} 
