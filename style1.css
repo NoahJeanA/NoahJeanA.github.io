@@ -24,9 +24,9 @@ button {
 }
 .true {
     height: 50px;
-    width: 200px;
-    top: 400px;
-    left: 875px;
+    width: 10%;
+    top: 40%;
+    left: 87%;
     font-size: 20px;
     border-radius: 20px;
     background-color: white;
@@ -47,7 +47,7 @@ button {
 }
 .false {
     height: 50px;
-    width: 200px;
+    width: 10%;
     text-align: center;
     font-size: 20px;
     border-radius: 20px;
@@ -103,8 +103,8 @@ ul.main {
     position: sticky;
     text-align: left;
     -webkit-position-: sticky;
-    padding: 0;
-    top: 0;
+    padding: 0%;
+    top: 0%;
     -ms-user-select: None;
     -moz-user-select: None;
     -webkit-user-select: None;

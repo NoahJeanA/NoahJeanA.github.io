@@ -1,5 +1,5 @@
 body {
-    background-size: 2000px 2000px;
+    background-size: 100% 100%;
     background-color: rgb(44, 52, 68);
     background-repeat:no-repeat;
     
@@ -14,8 +14,8 @@ body {
     position: absolute;
     left:40%;
     top:20%;
-    height: 100px;
-    width: 400px;
+    height: 10%;
+    width: 20%;
     font-size: 20px;
     border-radius: 20px;
     background-color: white;
