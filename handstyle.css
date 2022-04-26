@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+* {
+    font-family: 'Secular One', sans-serif;
+}
+
+body {
+    background-color: rgb(44, 52, 68);
+    text-align: center;
+}
+button {
+    margin-top: 5px;
+    margin-right: 20px;
+    -ms-user-select: None;
+    -moz-user-select: None;
+    -webkit-user-select: None;
+    user-select: None; 
+}
+#q {
+    color: #ffffff;
+    line-height: 1px;
+    margin-top: 100px;
+    font-size: 80px;
+}
+
+.list {
+    color: #ffffff;
+    font-size: 200% ;
+    text-align: left;
+    
+}
+#U{
+    text-decoration: underline white;
+}
+
+ul.main {
+    position: sticky;
+    text-align: left;
+    -webkit-position-: sticky;
+    padding: 0%;
+    top: 0%;
+    -ms-user-select: None;
+    -moz-user-select: None;
+    -webkit-user-select: None;
+    user-select: None; 
+}
+.main li {
+    background-color: rgb(255, 255, 255);
+    display: inline-block;
+    margin: 4px;
+    border-radius: 2em;
+    overflow: hidden;
+    -ms-user-select: None;
+    -moz-user-select: None;
+    -webkit-user-select: None;
+    user-select: None; 
+}
+.main li a {
+    display: block;
+    padding: .5em;
+    min-width: 1.28571429em;
+    max-width: 1.28571429em;
+    height: 1.28571429em;
+    white-space: nowrap;
+    line-height: 1.5em;
+    transition: .5s;
+    text-decoration: none;
+    color: #000;
+    -ms-user-select: None;
+    -moz-user-select: None;
+    -webkit-user-select: None;
+    user-select: None; 
+}
+.main li i {
+    margin-right: .5em;
+    -ms-user-select: None;
+    -moz-user-select: None;
+    -webkit-user-select: None;
+    user-select: None; 
+}
+.main li:hover a {
+    max-width: 200px;
+    padding-right: 1em;
+    -ms-user-select: None;
+    -moz-user-select: None;
+    -webkit-user-select: None;
+    user-select: None; 
+}
+#buttons button:last-of-type {
+    margin-right: 0;
+}
+
