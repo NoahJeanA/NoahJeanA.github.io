@@ -132,7 +132,7 @@ function zufall(){
         a=false
     }
     if (y>26){
-        document.getElementById("question").innerHTML = "Ende";
+        q="Ende"
     }
     
     document.getElementById("question").innerHTML = q;
