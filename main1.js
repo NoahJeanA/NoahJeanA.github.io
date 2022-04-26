@@ -60,11 +60,11 @@ window.addEventListener("load", function() {
 function zufall(){
     y=y+1;
     if (y==2){
-        q=""
-        a=true
+        q="Albert Einstein hat die Atombombe Erfunden"
+        a=false
     }
     if (y==4){
-        q=""
+        q="Isotope sind normale Elemente"
         a=false
     }
     if (y==6){
