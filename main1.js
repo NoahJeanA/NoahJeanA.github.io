@@ -129,7 +129,10 @@ function zufall(){
     }
     if (y==36){
         q="Stralung misst man in mf (mikrofarat)"
-        a=true
+        a=false
+    }
+    if (y>26){
+        document.getElementById("question").innerHTML = "Ende";
     }
     
     document.getElementById("question").innerHTML = q;
