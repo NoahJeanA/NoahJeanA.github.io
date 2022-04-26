@@ -60,7 +60,7 @@ window.addEventListener("load", function() {
 function zufall(){
     y=y+1;
     if (y==2){
-        q="Albert Einstein hat die Atombombe Erfunden"
+        q="Albert Einstein hat die Atombombe erfunden"
         a=false
     }
     if (y==4){
@@ -80,51 +80,51 @@ function zufall(){
         a=true
     }
     if (y==12){
-        q="In einer Atombombe werden mindestens 2 Kritesche Massen benötigt"
+        q="In einer Atombombe werden mindestens 2 kritesche Massen benötigt"
         a=false
     }
     if (y==14){
-        q="Lithium braucht keinen externen zünder zum zu explodiren"
+        q="Lithium braucht keinen externen Zünder um zu explodieren"
         a=false
     }
     if (y==16){
-        q="Die Sprengkraft einer Kernfussionsbombe ist auf 10567kt TNT begretnzt"
+        q="Die Sprengkraft einer Kernfussionsbombe ist auf 10567kt TNT begrentzt"
         a=false
     }
     if (y==18){
-        q="Phase 1 einer Atombomben dauert nur 1ms"
+        q="Phase 1 einer Atombombe dauert nur 1ms"
         a=true
     }
     if (y==20){
-        q="Der Lichtblitz hat so viel energie dass er alles in der Umgebung anzündet"
+        q="Der Lichtblitz hat so viel Energie dass er alles in der Umgebung anzündet"
         a=true
     }
     if (y==22){
-        q="Für die Druckwelle sind die meisten gebeude nicht ausgeleht"
+        q="Für die Druckwelle sind die meisten Gebäude nicht ausgeleht"
         a=true
     }
     if (y==24){
-        q="Die Stürme werden durch Radioaktive Stralung verursacht"
+        q="Die Stürme werden durch Radioaktive Strahlung verursacht"
         a=false
     }
     if (y==26){
-        q="Der Atompilz saugt Luft an gun facht so das Feier weiter an"
+        q="Der Atompilz saugt Luft an und facht so das Feuer weiter an"
         a=true
     }
     if (y==28){
-        q="Noch in 24km entfernung werden Fenster zu Tötlichen gefahren"
+        q="Noch in 30km Entfernung werden Fenster zu tötlichen Gefahren"
         a=false
     }
     if (y==30){
-        q="Nach einer Atombombe ist die meiste infrastrucktur kaputt"
+        q="Nach einer Atombombe ist die meiste Infrastrucktur kaputt"
         a=true
     }
     if (y==32){
-        q="Der Regen verbreitet die Radioaktive asche überall und viele werden Stralungskrank"
+        q="Der Regen verbreitet die radioaktive Asche überall und viele werden stralungskrank"
         a=true
     }
     if (y==34){
-        q="Die Patikel in der Atmoswfaire können einen Nuklearen winter verursachen"
+        q="Die Partikel in der Atmosphäre können einen nuklearen Winter verursachen"
         a=true
     }
     if (y==36){
