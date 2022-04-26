@@ -68,89 +68,70 @@ function zufall(){
         a=false
     }
     if (y==6){
-        q=""
+        q="In Atombomben wird das Element Uran -235 verwendet "
         a=true
     }
     if (y==8){
-        q=""
+        q="Die erste Atombombe wurde in China gezündet"
         a=false
     }
     if (y==10){
-        q=""
+        q="In Atombomben werden schwere Kerne benötigt"
         a=true
     }
     if (y==12){
-        q=""
+        q="In einer Atombombe werden mindestens 2 Kritesche Massen benötigt"
         a=false
     }
     if (y==14){
-        q=""
+        q="Lithium braucht keinen externen zünder zum zu explodiren"
         a=false
     }
-    if (y==816){
-        q=""
+    if (y==16){
+        q="Die Sprengkraft einer Kernfussionsbombe ist auf 10567kt TNT begretnzt"
         a=false
     }
     if (y==18){
-        q=""
-        a=false
+        q="Phase 1 einer Atombomben dauert nur 1ms"
+        a=true
     }
     if (y==20){
-        q=""
-        a=false
+        q="Der Lichtblitz hat so viel energie dass er alles in der Umgebung anzündet"
+        a=true
     }
     if (y==22){
-        q=""
+        q="Für die Druckwelle sind die meisten gebeude nicht ausgeleht"
         a=true
     }
     if (y==24){
-        q=""
+        q="Die Stürme werden durch Radioaktive Stralung verursacht"
         a=false
     }
     if (y==26){
-        q=""
+        q="Der Atompilz saugt Luft an gun facht so das Feier weiter an"
         a=true
     }
     if (y==28){
-        q=""
+        q="Noch in 24km entfernung werden Fenster zu Tötlichen gefahren"
         a=false
     }
     if (y==30){
-        q=""
+        q="Nach einer Atombombe ist die meiste infrastrucktur kaputt"
         a=true
     }
     if (y==32){
-        q=""
+        q="Der Regen verbreitet die Radioaktive asche überall und viele werden Stralungskrank"
         a=true
     }
     if (y==34){
-        q=""
+        q="Die Patikel in der Atmoswfaire können einen Nuklearen winter verursachen"
         a=true
     }
     if (y==36){
-        q=""
+        q="Stralung misst man in mf (mikrofarat)"
         a=true
     }
-    if (y==38){
-        q=""
-        a=true
-    }
-    if (y==40){
-        q=""
-        a=false
-    }
-    if (y==42){
-        q=""
-        a=true
-    }
-    if (y==44){
-        q=""
-        a=true
-    }
-    if (y==46){
-        q=""
-        a=true
-    }
+    
     document.getElementById("question").innerHTML = q;
            
 }
