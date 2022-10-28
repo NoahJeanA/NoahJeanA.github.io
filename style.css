@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+* {
+    font-family: 'Secular One', sans-serif;
+}
+
+body {
+    background-color: rgb(44, 52, 68);
+    text-align: center;
+    margin-left: 80px;
+    
+
+}
+button {
+    margin-right: 20px;
+    -ms-user-select: None;
+    -moz-user-select: None;
+    -webkit-user-select: None;
+    user-select: None; 
+}
+
+.s {
+    text-align: center;
+    margin-top: 400px;
+    color: white;
+    font-size: 50px;
+    top: 50px;
+    bottom:200px;
+    margin-bottom: 5px;
+    -ms-user-select: None;
+    -moz-user-select: None;
+    -webkit-user-select: None;
+    user-select: None; 
+
+}
+.cook {
+    height: 50px;
+    width: 200px;
+    font-size: 20px;
+    border-radius: 20px;
+    background-color: white;
+    border: none;
+    transition: all 0.3s ease 0s;
+    -ms-user-select: None;
+    -moz-user-select: None;
+    -webkit-user-select: None;
+    user-select: None; 
+}
+.cook:hover {
+
+    background-color: rgb(126, 126, 126);
+    color: white;
+}
+.ttic {
+    height: 50px;
+    width: 200px;
+    font-size: 20px;
+    border-radius: 20px;
+    background-color: white;
+    border: none;
+    transition: all 0.3s ease 0s;
+    -ms-user-select: None;
+    -moz-user-select: None;
+    -webkit-user-select: None;
+    user-select: None; 
+}
+.ttic:hover {
+    background-color: rgb(126, 126, 126);
+    color: white;
+    -ms-user-select: None;
+    -moz-user-select: None;
+    -webkit-user-select: None;
+    user-select: None; 
+}
+.mitw {
+    height: 50px;
+    width: 200px;
+    font-size: 20px;
+    border-radius: 20px;
+    background-color: white;
+    border: none;
+    transition: all 0.3s ease 0s;
+    -ms-user-select: None;
+    -moz-user-select: None;
+    -webkit-user-select: None;
+    user-select: None; 
+}
+.mitw:hover:hover {
+    background-color: rgb(126, 126, 126);
+    color: white;
+    -ms-user-select: None;
+    -moz-user-select: None;
+    -webkit-user-select: None;
+    user-select: None;
+}
+.galg {
+    height: 50px;
+    width: 200px;
+    font-size: 20px;
+    border-radius: 20px;
+    background-color: white;
+    border: none;
+    transition: all 0.3s ease 0s;
+    -ms-user-select: None;
+    -moz-user-select: None;
+    -webkit-user-select: None;
+    user-select: None; 
+}
+.galg:hover {
+    background-color: rgb(126, 126, 126);
+    color: white;
+}
