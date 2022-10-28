@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README-Docker-Compose.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="kapitel-1--installieren-und-einrichten-eines-apache-server-%C3%BCber-docker"><strong>Kapitel 1 : Installieren und einrichten eines Apache Server über Docker</strong></h1>
+<p>Der erste Schritt zum Erstellen eines Apache Webserver ist das Anlegen eines Ordners, worin man die nötigen Dateien speichern kann.
+Zuerst setzen wir eine Variable für unseren Ordnernamen, um uns Zeit zu sparen.</p>
+<pre class="hljs"><code><div><span class="hljs-built_in">export</span> FOLDER=<span class="hljs-string">"&lt;NEWFOLDER&gt;"</span>
+</div></code></pre>
+<p>Danach erstellen wir den Ordner und gehen auch gleich hinein.</p>
+<pre class="hljs"><code><div>mkdir <span class="hljs-string">"<span class="hljs-variable">$FOLDER</span>"</span>
+<span class="hljs-built_in">cd</span> <span class="hljs-string">"<span class="hljs-variable">$FOLDER</span>"</span>
+</div></code></pre>
+<p>Als nächsten Schritt wird in dem Ordner eine YAML Datei erstellt.
+Diese Datei soll docker-compose.yml heißen.</p>
+<p>In der Datei definieren wir unseren Apache-Docker.</p>
+<pre class="hljs"><code><div><span class="hljs-attr">version:</span> <span class="hljs-string">"3.9"</span>
+<span class="hljs-attr">services:</span>
+
+  <span class="hljs-attr">web:</span>
+    <span class="hljs-attr">build:</span> <span class="hljs-string">.</span>
+    <span class="hljs-attr">ports:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">"8000:80"</span>
+    <span class="hljs-attr">volumes:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">./public:/var/www/html/</span>
+</div></code></pre>
+<p>Zuerst wird die Version von Docker-compose festgelegt.
+In diesem Fall ist es die Version 3.9
+Danach eröffnen wir einen Service.
+In den Service definieren wir den Namen.
+Mit dem Ausdruck &quot;build .&quot; sagen wir, dass Docker den Container mit einem Dockerfile bauen soll.
+Danach legen wir noch den Port fest, an dem der Webserver lauschen soll.
+Unter dem Ausdruck &quot;volumes&quot; sagen wir, wo unter Apache in unserem Docker den Webserver erstellen soll. In der Datei definieren wir unseren Apache-Docker.</p>
+<p>Jetzt müssen wir noch einen Dockerfile erstelle.
+Dieser muss den Namen <strong>Dockerfile</strong> tragen.</p>
+<pre class="hljs"><code><div>FROM php:apache
+RUN docker-php-ext-install mysqli &amp;&amp; docker-php-ext-enable mysqli
+
+</div></code></pre>
+<p>Mit dem Dockerfile sagen wir welches Image geladen werden soll und wir installieren noch ein Programm was MySQL zulässt</p>
+<p>Damit wir auch etwas auf unserem Webserver sehen können, erstellen wir noch einen Ordner, worin wir eine PHP Datei speichern.</p>
+<pre class="hljs"><code><div>mkdir public
+<span class="hljs-built_in">cd</span> public
+</div></code></pre>
+<p>Die PHP Datei kann z.B so Aussehen:</p>
+<pre class="hljs"><code><div> <span class="hljs-meta">&lt;?php</span> <span class="hljs-keyword">echo</span> <span class="hljs-string">'&lt;HTML&gt;&lt;body&gt;&lt;p&gt;Hallo Welt&lt;/p&gt;&lt;/body&gt;&lt;/HTML&gt;'</span>; <span class="hljs-meta">?&gt;</span>
+</div></code></pre>
+<p>Nun können wir unseren Docker bauen.(als root ausführen)</p>
+<pre class="hljs"><code><div>docker compose build web
+docker compose up
+</div></code></pre>
+<p>Nach dem Erstellen der Docker sollte man unter der Adresse <strong>localhost:8000/</strong> die PHP Datei angezeigt werden.</p>
+<h1 id="kapitel-2-installieren-und-einrichten-einer-mysql-datenbank"><strong>Kapitel 2: Installieren und einrichten einer MySQL Datenbank</strong></h1>
+<p>Wenn dem so ist, kann jetzt ein neuer Docker erstellt werden, der eine MySQL Datenbank erstellt wird.
+Dafür nehmen wir folgende Änderungen an unserer docker-compose.yml vor:</p>
+<pre class="hljs"><code><div><span class="hljs-attr">version:</span> <span class="hljs-string">"3.9"</span>
+<span class="hljs-attr">services:</span>
+
+  <span class="hljs-attr">web:</span>
+    <span class="hljs-attr">build:</span> <span class="hljs-string">.</span>
+    <span class="hljs-attr">ports:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">"8000:80"</span>
+    <span class="hljs-attr">volumes:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">./public:/var/www/html/</span>
+
+  <span class="hljs-attr">db:</span>
+    <span class="hljs-attr">image:</span> <span class="hljs-string">mysql</span>
+    <span class="hljs-attr">command:</span> <span class="hljs-string">--default-authentication-plugin=mysql_native_password</span>
+    <span class="hljs-attr">restart:</span> <span class="hljs-string">always</span>
+    <span class="hljs-attr">volumes:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">./db:/var/lib/mysql</span>
+    <span class="hljs-attr">ports:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">"3306:3306"</span>
+    <span class="hljs-attr">environment:</span>
+      <span class="hljs-attr">MYSQL_ROOT_PASSWORD:</span> <span class="hljs-string">example</span>
+
+
+  <span class="hljs-attr">adminer:</span>
+    <span class="hljs-attr">image:</span> <span class="hljs-string">adminer</span>
+    <span class="hljs-attr">restart:</span> <span class="hljs-string">always</span>
+    <span class="hljs-attr">ports:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">"8080:8080"</span> 
+</div></code></pre>
+<p>Zuerst beschreiben wir eine Datenbank, die wir db nennen.
+Das Image von der Docker Hub heißt mysql.
+Durch den Ausdruck &quot;volumes&quot; legen wir den Pfad fest, wo die Datenbank gespeichert wird.
+Mit dem Ausdruck &quot;command&quot; übergeben wir Parameter an den Docker und mit
+restart legen wir fest, dass falls der Docker abstürzt er immer neu gestartet wird.</p>
+<p>Danach definieren wir noch einen adminer Docker.
+Dieser wird auch immer neu gestartet und lauscht an den Port <strong>8080</strong> auf unserem Webserver.</p>
+<p>Jetzt muss der Docker noch neu gestartet werden.
+Das machen wir mit folgenden Befehlen:</p>
+<pre class="hljs"><code><div>docker compose down
+docker compose build db adminer
+docker compose up
+</div></code></pre>
+<p>Danach sollten wir die Datenbank über die URL <strong>localhost:8080</strong> unsere Datenbank erreichen.
+Wenn alles geklappt hat, ist man nun in dem Menü von MySQL.
+Hier muss man den Server,Bedutzer und das Passwort eintragen.
+Den Server nennen wir <strong>db</strong> und der Benutzer ist <strong>root</strong>.
+Das Passwort ist standardmäßig <strong>password</strong>.</p>
+<p>Nach dem Einloggen erstellen wir eine neue Datenbank unter dem Punkt <strong>Datenbank erstellen</strong> und nennen sie <strong>wordpress</strong>.
+Jetzt gehen wir in zu dem Punkt <strong>SQL-Kommando</strong> und tragen dort folgende Befehle ein.</p>
+<pre class="hljs"><code><div>
+CREATE USER <span class="hljs-string">'wordpress'</span>@<span class="hljs-string">'%'</span> IDENTIFIED BY <span class="hljs-string">'wordpress'</span>;
+CRANT ALL PRIVILEGES ON wordpress . * TO <span class="hljs-string">'wordpress'</span>@<span class="hljs-string">'%'</span>;
+
+</div></code></pre>
+<p>Um die Datenbank zu sichern muss noch ein Ordner im Stammverzeichnis angelegt werden.</p>
+<pre class="hljs"><code><div>mkdir db 
+</div></code></pre>
+<p>Jetzt sollte die Datenbank auch noch nach dem neu starten der Docker noch erhalten bleiben.</p>
+<h1 id="kapitel-3-installieren-und-einrichten-von-wordpress"><strong>Kapitel 3: Installieren und einrichten von WordPress</strong></h1>
+<p>Um WordPress zu nutzen, müssen wir es zuerst installieren.
+Dies kann man auf folgender Website machen: <strong>https://de.wordpress.org/download/</strong>
+nach dem Download solltest du eine ZIP. Dateien in deinem Download Ordner haben.
+Entpacke den Ordner dort und öffne ihn bis zum Verzeichnis WordPress.
+Dort kopierst du alle Dateien und fügst sie in deinen <strong>Public</strong> Ordner ein.
+Bestätige das Überschreiben einiger deiner Dateien.
+Jetzt muss der Docker einmal neu gestartet werden.</p>
+<pre class="hljs"><code><div>docker compose down
+docker compose build db adminer web
+docker compose up
+</div></code></pre>
+<p>Nach dem Neustart kann unter der URL: <strong>http://localhost:8000/</strong> unser WordPress öffnen.
+Die Einloggdaten sind:
+Database Name: <strong>wordpress</strong>
+Username: <strong>wordpress</strong>
+Passwort: <strong>wordpress</strong>
+um den Database Host herauszufinden gebe im Terminal folgendes ein:</p>
+<pre class="hljs"><code><div>ip a l
+</div></code></pre>
+<p>Unter dem Punkt wlp0s... findest du deine IP unter dem Punkt <strong>inet</strong>.(ohne z. B. /24)
+Jetzt ist den WordPress fertig eingerichtet und kann benutzt werden.</p>
+
+</body>
+</html>
